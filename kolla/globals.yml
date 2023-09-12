@@ -1,2 +1,39 @@
 ---
 # Add extra Kolla global configuration here.
+kolla_copy_ca_into_containers: "yes"
+enable_cluster_user_trust: true
+glance_backend_ceph: "yes"
+cinder_backend_ceph: "yes"
+nova_backend_ceph: "yes"
+
+#Octavia
+octavia_auto_configure: "no"
+octavia_amp_boot_network_list: "49e4bb51-8734-4dd0-ad29-fe771648ae6e"
+octavia_amp_secgroup_list: "53dcfd53-f1b3-4a8a-a24c-76015fe3daf7"
+octavia_amp_flavor_id: "b75d0fa6-a436-4f94-bb7d-e45de9f4960e" 
+  #octavia_amp_image_tag: "amphora"
+#Octavia Certs
+octavia_certs_country: IT
+octavia_certs_state: Italy
+octavia_certs_organization: OpenStack
+octavia_certs_organizational_unit: Octavia
+
+ceph_rgw_swift_compatibility: "false"
+ceph_rgw_swift_account_in_url: "true"
+ceph_rgw_hosts:
+  - host: controller1
+    ip: 100.64.2.157
+    port: 8081
+  - host: controller2
+    ip: 100.64.2.158
+    port: 8081
+  - host: controller3
+    ip: 100.64.2.159
+    port: 8081
+
+#Designate
+designate_recursion: "yes"
+designate_forwarders_addresses: "8.8.8.8; 8.8.4.4"
+designate_ns_record:
+  - "ns1.testpoc.e4"
+designate_dnssec_validation: "no"

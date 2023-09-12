@@ -18,3 +18,6 @@
 ###############################################################################
 # Dummy variable to allow Ansible to accept this file.
 workaround_ansible_issue_8743: yes
+internal_interface: internal
+baremetal_interface: baremetal
+

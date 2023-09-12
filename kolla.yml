@@ -5,7 +5,7 @@
 # Kolla installation.
 
 # Type of Kolla control installation. One of 'binary' or 'source'.
-#kolla_ctl_install_type:
+kolla_ctl_install_type: "source"
 
 # Path to directory for kolla source code checkout.
 #kolla_source_path:
@@ -28,7 +28,7 @@
 
 # Type of Kolla-ansible control installation. One of 'binary' or 'source'.
 # Default is 'source'.
-#kolla_ansible_ctl_install_type:
+kolla_ansible_ctl_install_type: "source"
 
 # Path to directory for kolla-ansible source code checkout.
 # Default is $KOLLA_SOURCE_PATH, or $PWD/src/kolla-ansible if
@@ -45,7 +45,7 @@
 
 # Path to virtualenv in which to install kolla-ansible. Default is
 # $KOLLA_VENV_PATH or $PWD/venvs/kolla-ansible if $KOLLA_VENV_PATH is not set.
-#kolla_ansible_venv:
+kolla_ansible_venv: /home/ubuntu/venvs/kolla-ansible
 
 # Extra requirements to install inside the kolla-ansible virtualenv.
 #kolla_ansible_venv_extra_requirements:
@@ -68,7 +68,7 @@
 
 # Kolla base container image distribution. Options are "centos", "debian",
 # "rocky", "ubuntu". Default is {{ os_distribution }}.
-#kolla_base_distro:
+kolla_base_distro: "ubuntu"
 
 # Kolla base container image distribution version default map.
 # Defines default versions for each distribution.
@@ -250,7 +250,7 @@
 #kolla_ansible_vault_cacert:
 
 # Whether TLS is enabled for the external API endpoints. Default is 'no'.
-#kolla_enable_tls_external:
+kolla_enable_tls_external: true
 
 # Whether TLS is enabled for the internal API endpoints. Default is 'no'.
 #kolla_enable_tls_internal:
@@ -263,7 +263,7 @@
 #kolla_upper_constraints_file:
 
 # User account to use for Kolla SSH access. Default is 'kolla'.
-#kolla_ansible_user:
+kolla_ansible_user: ubuntu
 
 # Primary group of Kolla SSH user. Default is 'kolla'.
 #kolla_ansible_group:
@@ -280,7 +280,7 @@
 # Kolla feature flag configuration.
 
 #kolla_enable_aodh:
-#kolla_enable_barbican:
+kolla_enable_barbican: true
 #kolla_enable_blazar:
 #kolla_enable_ceilometer:
 #kolla_enable_ceilometer_horizon_policy_file:
@@ -288,9 +288,9 @@
 #kolla_enable_ceilometer_prometheus_pushgateway:
 #kolla_enable_cells:
 #kolla_enable_central_logging:
-#kolla_enable_ceph_rgw:
-#kolla_enable_ceph_rgw_loadbalancer:
-#kolla_enable_cinder:
+kolla_enable_ceph_rgw: true
+kolla_enable_ceph_rgw_loadbalancer: true
+kolla_enable_cinder: true
 #kolla_enable_cinder_backend_hnas_nfs:
 #kolla_enable_cinder_backend_iscsi:
 #kolla_enable_cinder_backend_lvm:
@@ -299,20 +299,20 @@
 #kolla_enable_cinder_backend_pure_iscsi:
 #kolla_enable_cinder_backend_pure_roce:
 #kolla_enable_cinder_backend_quobyte:
-#kolla_enable_cinder_backup:
+kolla_enable_cinder_backup: true
 #kolla_enable_cinder_horizon_policy_file:
 #kolla_enable_cloudkitty:
 #kolla_enable_collectd:
 #kolla_enable_container_healthchecks:
 #kolla_enable_cyborg:
-#kolla_enable_designate:
-#kolla_enable_destroy_images:
+kolla_enable_designate: true
+kolla_enable_destroy_images: true
 #kolla_enable_etcd:
 #kolla_enable_external_api_firewalld:
 #kolla_enable_external_mariadb_load_balancer:
 #kolla_enable_fluentd:
 #kolla_enable_freezer:
-#kolla_enable_glance:
+kolla_enable_glance: true
 #kolla_enable_glance_horizon_policy_file:
 #kolla_enable_glance_image_cache:
 #kolla_enable_gnocchi:
@@ -320,11 +320,11 @@
 #kolla_enable_grafana:
 #kolla_enable_grafana_external:
 #kolla_enable_hacluster:
-#kolla_enable_haproxy:
+kolla_enable_haproxy: true
 #kolla_enable_haproxy_memcached:
-#kolla_enable_heat:
+kolla_enable_heat: true
 #kolla_enable_heat_horizon_policy_file:
-#kolla_enable_horizon:
+kolla_enable_horizon: true
 #kolla_enable_horizon_blazar:
 #kolla_enable_horizon_cloudkitty:
 #kolla_enable_horizon_designate:
@@ -351,21 +351,21 @@
 #kolla_enable_ironic_neutron_agent:
 #kolla_enable_ironic_pxe_uefi:
 #kolla_enable_iscsid:
-#kolla_enable_keepalived:
-#kolla_enable_keystone:
+kolla_enable_keepalived: true
+kolla_enable_keystone: true
 #kolla_enable_keystone_federation:
 #kolla_enable_keystone_horizon_policy_file:
 #kolla_enable_kuryr:
 #kolla_enable_loadbalancer:
-#kolla_enable_magnum:
-#kolla_enable_manila:
-#kolla_enable_manila_backend_cephfs_native:
+kolla_enable_magnum: true
+kolla_enable_manila: true
+kolla_enable_manila_backend_cephfs_native: true
 #kolla_enable_manila_backend_cephfs_nfs:
-#kolla_enable_manila_backend_generic:
+kolla_enable_manila_backend_generic: true
 #kolla_enable_manila_backend_glusterfs_nfs:
 #kolla_enable_manila_backend_hnas:
-#kolla_enable_mariabackup:
-#kolla_enable_mariadb:
+kolla_enable_mariabackup: true
+kolla_enable_mariadb: true
 #kolla_enable_masakari:
 #kolla_enable_masakari_hostmonitor:
 #kolla_enable_masakari_instancemonitor:
@@ -373,8 +373,8 @@
 #kolla_enable_mistral:
 #kolla_enable_multipathd:
 #kolla_enable_murano:
-#kolla_enable_neutron:
-#kolla_enable_neutron_agent_ha:
+kolla_enable_neutron: true
+kolla_enable_neutron_agent_ha: true
 #kolla_enable_neutron_bgp_dragent:
 #kolla_enable_neutron_dvr:
 #kolla_enable_neutron_horizon_policy_file:
@@ -383,20 +383,20 @@
 #kolla_enable_neutron_mlnx:
 #kolla_enable_neutron_packet_logging:
 #kolla_enable_neutron_port_forwarding:
-#kolla_enable_neutron_provider_networks:
+kolla_enable_neutron_provider_networks: true
 #kolla_enable_neutron_qos:
 #kolla_enable_neutron_segments:
 #kolla_enable_neutron_sfc:
 #kolla_enable_neutron_sriov:
 #kolla_enable_neutron_trunk:
 #kolla_enable_neutron_vpnaas:
-#kolla_enable_nova:
+kolla_enable_nova: true
 #kolla_enable_nova_fake:
 #kolla_enable_nova_horizon_policy_file:
 #kolla_enable_nova_libvirt_container:
 #kolla_enable_nova_serialconsole_proxy:
 #kolla_enable_nova_ssh:
-#kolla_enable_octavia:
+kolla_enable_octavia: true
 #kolla_enable_octavia_driver_agent:
 #kolla_enable_opensearch:
 #kolla_enable_opensearch_dashboards:
@@ -439,7 +439,7 @@
 #kolla_enable_swift_s3api:
 #kolla_enable_tacker:
 #kolla_enable_telegraf:
-#kolla_enable_trove:
+kolla_enable_trove: true
 #kolla_enable_trove_singletenant:
 #kolla_enable_venus:
 #kolla_enable_vitrage:
@@ -463,7 +463,7 @@
 
 # Virtual IP address of OpenStack internal API. Default is the vip_address
 # attribute of the internal network.
-#kolla_internal_vip_address:
+kolla_internal_vip_address: 100.64.2.60
 
 # Fully Qualified Domain Name (FQDN) of OpenStack internal API. Default is the
 # fqdn attribute of the internal network if set, otherwise
@@ -472,7 +472,7 @@
 
 # Virtual IP address of OpenStack external API. Default is the vip_address
 # attribute of the external network.
-#kolla_external_vip_address:
+kolla_external_vip_address: 172.18.36.150
 
 # Fully Qualified Domain Name (FQDN) of OpenStack external API. Default is the
 # fqdn attribute of the external network if set, otherwise

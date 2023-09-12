@@ -20,7 +20,7 @@
 # Remote path configuration (seed, seed-hypervisor and overcloud hosts).
 
 # Base path for kayobe state on remote hosts.
-#base_path:
+base_path: "/home/ubuntu"
 
 # Path in which to store configuration on remote hosts.
 #config_path:

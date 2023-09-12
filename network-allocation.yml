@@ -1,0 +1,23 @@
+baremetal_ips:
+  localhost: 100.127.202.150
+external_ips:
+  controller01: 172.18.40.106
+  controller02: 172.18.40.107
+  controller03: 172.18.40.108
+internal_ips:
+  controller01: 100.64.2.157
+  controller02: 100.64.2.158
+  controller03: 100.64.2.159
+  localhost: 100.64.2.150
+public_ips:
+  controller01: 172.18.36.156
+  controller02: 172.18.36.157
+  controller03: 172.18.36.158
+storage_ips:
+  controller01: 100.127.103.106
+  controller02: 100.127.103.107
+  controller03: 100.127.103.108
+tenant_ips:
+  controller01: 100.127.104.106
+  controller02: 100.127.104.107
+  controller03: 100.127.104.108

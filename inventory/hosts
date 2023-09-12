@@ -15,9 +15,9 @@ localhost ansible_connection=local
 localhost ansible_connection=local
 
 [controllers]
-controller1 ipmi_address=100.127.102.25 bmc_type=intel
-controller2 ipmi_address=100.127.102.26 bmc_type=intel
-controller3 ipmi_address=100.127.102.27 bmc_type=intel
+#controller1 ipmi_address=100.127.202.25 bmc_type=intel
+#controller2 ipmi_address=100.127.202.26 bmc_type=intel
+#controller3 ipmi_address=100.127.202.27 bmc_type=intel
 
 # Add controller nodes here if required. These hosts will provide the
 # OpenStack overcloud.

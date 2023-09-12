@@ -1,0 +1,10 @@
+#!/bin/bash
+# Add Virtual interface  
+
+if [ ${DIB_DEBUG_TRACE:-1} -gt 0 ]; then
+    set -x
+fi
+set -eu
+set -o pipefail
+
+sudo cp  $TMP_HOOKS_PATH/10-veth.netdev $TMP_MOUNT_PATH/etc/systemd/network

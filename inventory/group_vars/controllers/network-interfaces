@@ -18,3 +18,12 @@
 ###############################################################################
 # Dummy variable to allow Ansible to accept this file.
 workaround_ansible_issue_8743: yes
+internal_interface: ens785f0.100
+baremetal_interface: ens785f0
+public_interface:  public_br.1836
+public_bridge_ports:
+- ens259f0
+#service_interface: ens259f0.1838
+external_interface: ens259f0.1840
+storage_interface: ens785f0.103
+tenant_interface: ens785f0.104

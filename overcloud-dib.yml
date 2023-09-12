@@ -23,10 +23,10 @@
 
 # DIB base OS element. Default is {{ 'rocky-container' if os_distribution ==
 # 'rocky' else os_distribution }}.
-#overcloud_dib_os_element:
+overcloud_dib_os_element: "ubuntu"
 
 # DIB image OS release. Default is {{ os_release }}.
-#overcloud_dib_os_release:
+overcloud_dib_os_release: "jammy"
 
 # List of default DIB elements. Default is ["centos", "cloud-init-datasources",
 # "disable-selinux", "enable-serial-console", "vm"] when
@@ -35,21 +35,40 @@
 # when overcloud_dib_os_element is "rocky" or
 # ["ubuntu", "cloud-init-datasources", "enable-serial-console", "vm"]
 # when overcloud_dib_os_element is "ubuntu".
-#overcloud_dib_elements_default:
+overcloud_dib_elements_default:
+- ubuntu
+- cloud-init-datasources
+- enable-serial-console
+- vm
+- block-device-efi
+- devuser
 
 # List of additional DIB elements. Default is none.
-#overcloud_dib_elements_extra:
+overcloud_dib_elements_extra:
+- veth
 
 # List of DIB elements. Default is a combination of
 # overcloud_dib_elements_default and overcloud_dib_elements_extra.
-#overcloud_dib_elements:
+#overcloud_dib_elements: 
 
 # DIB default environment variables. Default is
 # {"DIB_BOOTLOADER_DEFAULT_CMDLINE": "nofb nomodeset gfxpayload=text
 # net.ifnames=1", "DIB_CLOUD_INIT_DATASOURCES": "ConfigDrive",
 # "DIB_CONTAINERFILE_RUNTIME": "docker", "DIB_CONTAINERFILE_NETWORK_DRIVER":
 # "host", "DIB_RELEASE": "{{ overcloud_dib_os_release }}"}.
-#overcloud_dib_env_vars_default:
+overcloud_dib_env_vars_default:
+  DIB_DEV_USER_USERNAME: "e4user"
+  DIB_DEV_USER_PASSWORD: "000000"
+  DIB_DEV_USER_PWDLESS_SUDO: "yes"
+  DIB_DEV_USER_SHELL: "/bin/bash"
+  DIB_BOOTLOADER_DEFAULT_CMDLINE: "nofb nomodeset gfxpayload=text net.ifnames=1"
+  DIB_CLOUD_INIT_DATASOURCES: "ConfigDrive"
+  DIB_CONTAINERFILE_RUNTIME: "docker" 
+  DIB_CONTAINERFILE_NETWORK_DRIVER: "host"
+  DIB_RELEASE: "jammy"
+    #DIB_ELEMENTS_PATH: "/etc/kayobe/dib/elements"
+  ELEMENTS_PATH: "/etc/kayobe/dib/elements"
+
 
 # DIB additional environment variables. Default is none.
 #overcloud_dib_env_vars_extra:

@@ -10,10 +10,12 @@
 
 # Default bios interface to be used for nodes that do not have bios_interface
 # field set.
-#kolla_ironic_default_bios_interface:
+kolla_ironic_default_bios_interface: baremetal
 
 # Specify the list of boot interfaces to load during service initialization.
-#kolla_ironic_enabled_boot_interfaces:
+kolla_ironic_enabled_boot_interfaces:
+- pxe
+- ipxe
 
 # Default boot interface to be used for nodes that do not have boot_interface
 # field set.

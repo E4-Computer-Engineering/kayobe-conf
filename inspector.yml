@@ -44,13 +44,13 @@
 
 # Which MAC addresses to add as ports during introspection. One of 'all',
 # 'active' or 'pxe'.
-#inspector_add_ports:
+inspector_add_ports: "pxe"
 
 # Which ports to keep after introspection. One of 'all', 'present', or 'added'.
 #inspector_keep_ports:
 
 # Whether to enable discovery of nodes not managed by Ironic.
-#inspector_enable_discovery:
+inspector_enable_discovery: true
 
 # The Ironic driver with which to register newly discovered nodes.
 #inspector_discovery_enroll_node_driver:
@@ -59,10 +59,10 @@
 # Ironic inspector configuration.
 
 # Ironic inspector IPMI username to set.
-#inspector_ipmi_username:
+inspector_ipmi_username: "talos"
 
 # Ironic inspector IPMI password to set.
-#inspector_ipmi_password:
+inspector_ipmi_password: "E4company!TM"
 
 # Ironic inspector default network interface name on which to check for an LLDP
 # switch port description to use as the node's name.
