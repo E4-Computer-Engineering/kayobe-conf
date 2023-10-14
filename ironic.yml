@@ -19,7 +19,7 @@ kolla_ironic_enabled_boot_interfaces:
 
 # Default boot interface to be used for nodes that do not have boot_interface
 # field set.
-#kolla_ironic_default_boot_interface:
+kolla_ironic_default_boot_interface: pxe
 
 # Specify the list of console interfaces to load during service initialization.
 #kolla_ironic_enabled_console_interfaces:

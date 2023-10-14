@@ -19,7 +19,7 @@ seed_bootstrap_user: "ubuntu"
 #seed_extra_network_interfaces:
 
 # Whether to enable SNAT on seed nodes. Default is false.
-#seed_enable_snat:
+seed_enable_snat: true
 
 ###############################################################################
 # Seed node software RAID configuration.

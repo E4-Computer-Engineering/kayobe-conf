@@ -16,7 +16,10 @@
 #controller_default_network_interfaces:
 
 # List of extra networks to which controller nodes are attached.
-#controller_extra_network_interfaces:
+controller_extra_network_interfaces:
+  - custom1
+  - custom2
+  - custom3
 
 # List of network interfaces to which network nodes are attached.
 #controller_network_host_network_interfaces:

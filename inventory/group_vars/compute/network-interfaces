@@ -1,6 +1,6 @@
 ---
 ###############################################################################
-# Network interface definitions for the compute group.
+# Network interface definitions for the controller group.
 
 # NOTE: The content of this section is very deployment-specific, since it
 # depends on the names and types of networks in the deployment. It should
@@ -18,3 +18,12 @@
 ###############################################################################
 # Dummy variable to allow Ansible to accept this file.
 workaround_ansible_issue_8743: yes
+custom3_interface: ens785f0
+public_interface: ens259f0
+public_no_ip: true
+internal_interface: ens785f0.100
+baremetal_interface: ens785f0.202
+service_interface: "{{custom3_interface}}.{{service_vlan}}"
+service_no_ip: true
+storage_interface: ens785f0.103
+tenant_interface: ens785f0.104

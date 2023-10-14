@@ -5,7 +5,7 @@
 # Network role to network mappings.
 
 # Name of the network used for admin access to the overcloud
-admin_oc_net_name: internal
+admin_oc_net_name: baremetal
 
 # Name of the network used by the seed to manage the bare metal overcloud
 # hosts via their out-of-band management controllers.
@@ -32,8 +32,8 @@ internal_net_name: internal
 # If external_net_name is defined, external_net_names will default to a list
 # containing one item, external_net_name.
 external_net_names:
-- external
-
+  - public
+  - service
 # Name of the network used to expose the public OpenStack API endpoints.
 public_net_name:  public
 
@@ -83,24 +83,38 @@ storage_mgmt_net_name: storage
 ###############################################################################
 #public network
 public_cidr: 172.18.36.0/24
-public_allocation_pool_start: 172.18.36.150
+public_allocation_pool_start: 172.18.36.160
 public_allocation_pool_end: 172.18.36.180
 public_routes:
   - cidr: 0.0.0.0/0
     gateway: 172.18.36.1
 public_vlan: 1836
 
+custom2_mtu: "1500"
+custom2_no_ip: true
+
+custom1_mtu: "1500"
+custom1_no_ip: true
+
 baremetal_cidr: 100.127.202.0/24
 baremetal_allocation_pool_start: 100.127.202.150
 baremetal_allocation_pool_end: 100.127.202.180
-baremetal_inspection_allocation_pool_start: 100.127.202.190
-baremetal_inspection_allocation_pool_end: 100.127.202.210
-
-
+  #baremetal_inspection_allocation_pool_start: 100.127.202.190
+  #baremetal_inspection_allocation_pool_end: 100.127.202.210
+baremetal_vlan: 202
 internal_cidr: 100.64.2.0/24
 internal_allocation_pool_start: 100.64.2.150
 internal_allocation_pool_end: 100.64.2.180
 internal_vlan: 100
+
+
+service_cidr: 100.127.105.0/24
+service_allocation_pool_start: 100.127.105.100
+service_allocation_pool_end: 100.127.105.110
+service_vlan: 105
+service_no_ip: true
+service_physical_network: physnet2
+  
 
 storage_cidr: 100.127.103.0/24
 storage_allocation_pool_start: 100.127.103.100
@@ -112,24 +126,21 @@ tenant_allocation_pool_start: 100.127.104.100
 tenant_allocation_pool_end: 100.127.104.110
 tenant_vlan: 104
 
-service_cidr: 172.18.38.0/24
-service_allocation_pool_start: 172.18.38.100
-service_allocation_pool_end: 172.18.38.110
-tenant_vlan: 1838
+  #service_cidr: 172.18.38.0/24
+  #service_allocation_pool_start: 172.18.38.100
+  #service_allocation_pool_end: 172.18.38.110
+  #service_vlan: 1838
 
-external_vlan: 1840
-external_cidr: 172.18.40.0/24
-external_allocation_pool_start: 172.18.40.50
-external_allocation_pool_end: 172.18.40.60
-external_routes:
-  - cidr: 0.0.0.0/0
-    gateway: 172.18.40.1
-external_vlan: 1840
-
-
+external_cidr: 172.18.36.0/24
+external_neutron_allocation_pool_start: 172.18.36.50
+external_neutron_allocation_pool_end: 172.18.36.60
+external_neutron_gateway: 172.18.36.1
+ #external_vlan: 1836
+external_no_ip: true
+external_physical_network: physnet1
 
 # Suffix for Open vSwitch bridge names.
-#network_bridge_suffix_ovs:
+network_bridge_suffix_ovs: 'x'
 
 # Prefix for virtual patch interface names.
 #network_patch_prefix:
@@ -140,7 +151,7 @@ external_vlan: 1840
 
 # Suffix for virtual patch link interface names when connected towards the
 # OVS bridge.
-#network_patch_suffix_ovs:
+#network_patch_suffix_ovs: 'x'
 
 ###############################################################################
 # Network routing table configuration.

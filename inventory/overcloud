@@ -4,16 +4,11 @@
 
 
 [controllers]
-controller01 ipmi_address=100.127.202.25 bmc_type=intel
-controller02 ipmi_address=100.127.202.26 bmc_type=intel
-controller03 ipmi_address=100.127.202.27 bmc_type=intel
+controll01 ipmi_address=100.127.202.25 bmc_type=intel
+controll02 ipmi_address=100.127.202.26 bmc_type=intel
 
 [compute]
-controller01 ipmi_address=100.127.202.25 bmc_type=intel
-controller02 ipmi_address=100.127.202.26 bmc_type=intel
-controller03 ipmi_address=100.127.202.27 bmc_type=intel
+controll03 ipmi_address=100.127.202.27 bmc_type=intel
 
-[storage]
-controller01 ipmi_address=100.127.202.25 bmc_type=intel
-controller02 ipmi_address=100.127.202.26 bmc_type=intel
-controller03 ipmi_address=100.127.202.27 bmc_type=intel
+[storage:children]
+controllers
