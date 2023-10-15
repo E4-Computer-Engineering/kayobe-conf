@@ -10,7 +10,7 @@ nova_backend_ceph: "yes"
 
 #Octavia
 octavia_auto_configure: "no"
-octavia_amp_boot_network_list: "6899ece6-007e-4deb-a329-6bb13fcb1cc2"
+octavia_amp_boot_network_list: "5b04d30e-17b2-4d0a-8b8a-035337e52420"
 octavia_amp_secgroup_list: "098ab89f-f574-4a57-9f05-21ba40008c54"
 octavia_amp_flavor_id: "cb3264fe-5778-4950-baa7-9666c8fbcf4e" 
   #octavia_amp_image_tag: "amphora"
@@ -39,13 +39,13 @@ designate_forwarders_addresses: "8.8.8.8; 8.8.4.4"
 designate_ns_record:
   - "ns1.testpoc.e4"
 designate_dnssec_validation: "no"
-
+#Horizon MultiDomain
 horizon_keystone_multidomain: true
 horizon_keystone_domain_choices:
   default: default
   test1: domaintest1
   test2: domaintest2
-
+#Ovn
 neutron_plugin_agent: "ovn"
 neutron_ovn_distributed_fip: "yes"
 neutron_ovn_dhcp_agent: "yes"
