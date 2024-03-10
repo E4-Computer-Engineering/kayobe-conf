@@ -1,0 +1,13 @@
+---
+ansible_host: 172.16.8.23
+
+ansible_user: "ADMIN"
+switch_type: "dell-powerconnect"
+
+switch_config: []
+
+switch_interface_config:
+  ex 0/22:
+    description: controller0
+    config:
+      - "no shutdown"
