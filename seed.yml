@@ -4,13 +4,17 @@
 
 # User with which to access the seed via SSH during bootstrap, in order to
 # setup the Kayobe user account. Default is {{ os_distribution }}.
-#seed_bootstrap_user:
+
+seed_bootstrap_user: talos 
 
 ###############################################################################
 # Seed network interface configuration.
 
 # List of networks to which seed nodes are attached.
-#seed_network_interfaces:
+#seed_network_interfaces: 
+#  - admin
+#  - provision
+#  - bmc
 
 # List of default networks to which seed nodes are attached.
 #seed_default_network_interfaces:
@@ -19,7 +23,7 @@
 #seed_extra_network_interfaces:
 
 # Whether to enable SNAT on seed nodes. Default is false.
-#seed_enable_snat:
+seed_enable_snat: yes
 
 ###############################################################################
 # Seed node software RAID configuration.

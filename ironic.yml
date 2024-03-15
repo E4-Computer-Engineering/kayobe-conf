@@ -98,8 +98,9 @@
 #kolla_ironic_provisioning_network:
 
 # List of default kernel parameters to append for baremetal PXE boot.
-#kolla_ironic_pxe_append_params_default:
-
+kolla_ironic_pxe_append_params_default: 
+  - console=ttyS0
+  - console=ttyS1
 # List of additional kernel parameters to append for baremetal PXE boot.
 #kolla_ironic_pxe_append_params_extra:
 

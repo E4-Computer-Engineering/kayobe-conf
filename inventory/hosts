@@ -12,7 +12,7 @@ localhost ansible_connection=local
 [seed]
 # Add a seed node here if required. This host will provide the Bifrost
 # undercloud.
-
+seed-prod ansible_host=172.18.40.101
 [controllers]
 # Add controller nodes here if required. These hosts will provide the
 # OpenStack overcloud.
@@ -23,7 +23,7 @@ localhost ansible_connection=local
 [mgmt-switches]
 # Add management network switches here if required.
 [switches]
-E4CPRJ4501 ansible_host=172.16.8.23
+E4CPRJ4501 ansible_host=172.16.8.23 ansible_ssh_common_args='-o "Ciphers 3des-cbc"'
 [ctl-switches]
 # Add control and provisioning switches here if required.
 

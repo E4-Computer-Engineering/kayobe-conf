@@ -1,0 +1,6 @@
+admin_ips:
+  seed-prod: 172.18.40.101
+bmc_ips:
+  seed-prod: 100.127.200.15
+provision_ips:
+  seed-prod: 100.127.202.15

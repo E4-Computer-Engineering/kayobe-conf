@@ -18,3 +18,7 @@
 ###############################################################################
 # Dummy variable to allow Ansible to accept this file.
 workaround_ansible_issue_8743: yes
+
+admin_interface: enp1s0
+bmc_interface: enp7s0
+provision_interface: enp8s0
