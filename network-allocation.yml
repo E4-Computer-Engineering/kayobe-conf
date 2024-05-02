@@ -1,6 +1,25 @@
 admin_ips:
-  seed-prod: 172.18.40.101
+  medooza00: 172.18.16.43
+  medooza01: 172.18.16.44
+  medooza02: 172.18.16.45
+  seed-prod: 172.18.16.42
+bare_bmc_ips:
+  medooza00: 100.127.204.11
+  medooza01: 100.127.204.12
+  medooza02: 100.127.204.13
+bare_prov_ips:
+  medooza00: 100.127.205.1
+  medooza01: 100.127.205.2
+  medooza02: 100.127.205.3
 bmc_ips:
   seed-prod: 100.127.200.15
+internal_ips:
+  medooza00: 100.127.203.1
+  medooza01: 100.127.203.2
+  medooza02: 100.127.203.3
 provision_ips:
   seed-prod: 100.127.202.15
+tunnel_ips:
+  medooza00: 100.127.206.11
+  medooza01: 100.127.206.12
+  medooza02: 100.127.206.13

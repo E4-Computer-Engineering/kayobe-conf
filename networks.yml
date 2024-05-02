@@ -17,11 +17,11 @@ provision_oc_net_name: provision
 
 # Name of the network used by the overcloud hosts to manage the bare metal
 # compute hosts via their out-of-band management controllers.
-#oob_wl_net_name:
+oob_wl_net_name: bare_bmc
 
 # Name of the network used by the overcloud hosts to provision the bare metal
 # workload hosts.
-#provision_wl_net_name:
+provision_wl_net_name: bare_prov
 
 # Name of the network used to expose the internal OpenStack API endpoints.
 internal_net_name: internal
@@ -32,7 +32,7 @@ internal_net_name: internal
 # If external_net_name is defined, external_net_names will default to a list
 # containing one item, external_net_name.
 external_net_names: 
-  - external
+  - admin
 
 # Name of the network used to expose the public OpenStack API endpoints.
 public_net_name: admin
@@ -41,7 +41,7 @@ public_net_name: admin
 tunnel_net_name: tunnel
 
 # Name of the network used to carry storage data traffic.
-#storage_net_name:
+storage_net_name: internal
 
 # Name of the network used to carry storage management traffic.
 #storage_mgmt_net_name:
@@ -68,23 +68,43 @@ tunnel_net_name: tunnel
 # define the global attributes of networks. The following example shows a basic
 # configuration for a network called "example":
 
-admin_cidr: 172.18.40.0/24
-admin_allocation_pool_start: 172.18.40.110
-admin_allocation _pool_start: 172.18.40.130
-admin_gateway: 172.18.40.10
-  
-  
+admin_cidr: 172.18.16.0/24
+admin_allocation_pool_start: 172.18.40.43
+admin_allocation_pool_end: 172.18.40.49
+admin_gateway: 172.18.16.1
+
 bmc_cidr: 100.127.200.0/24
-bmc_allocation_pool_start: 100.127.200.10
-bmc_allocation _pool_start: 100.127.200.99
+bmc_allocation_pool_start: 100.127.200.20
+bmc_allocation_pool_end: 100.127.200.99
 
 
 provision_cidr: 100.127.202.0/24
-provision_allocation_pool_start: 100.127.202.10
-provision_allocation _pool_start: 100.127.202.99
+provision_allocation_pool_start: 100.127.202.11
+provision_allocation_pool_end: 100.127.202.100
 provision_inspection_allocation_pool_start: 100.127.202.190
 provision_inspection_allocation_pool_end: 100.127.202.210
   
+internal_cidr: 100.127.203.0/24
+internal_allocation_pool_start: 100.127.203.11
+internal_allocation_pool_end: 100.127.203.100
+internal_vlan: 203
+
+bare_bmc_cidr: 100.127.204.0/24
+bare_bmc_allocation_pool_start: 100.127.204.11
+bare_bmc_allocation_pool_end: 100.127.204.100
+
+
+bare_prov_cidr: 100.127.205.0/24
+bare_prov_allocation_pool_start: 100.127.205.11
+bare_prov_allocation_pool_end: 100.127.205.100
+bare_prov_inspection_allocation_pool_start: 100.127.205.190
+bare_prov_inspection_allocation_pool_end: 100.127.205.210
+
+
+tunnel_cidr: 100.127.206.0/24
+tunnel_allocation_pool_start: 100.127.206.11
+tunnel_allocation_pool_end: 100.127.206.100
+
 # example_cidr: 10.0.0.0/24
 # example_allocation_pool_start: 10.0.0.2
 # example_allocation_pool_start: 10.0.0.254

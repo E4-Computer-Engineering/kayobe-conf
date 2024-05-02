@@ -18,3 +18,30 @@
 ###############################################################################
 # Dummy variable to allow Ansible to accept this file.
 workaround_ansible_issue_8743: yes
+
+custom_interface: enp65s0f0
+
+custom2_interface: br_public
+custom2_bridge_ports: 
+ - "{{custom_interface}}"
+admin_interface: "{{custom2_interface}}.1816"
+admin_vlan: 1816
+
+#admin_interface: enp65s0f0.1816
+#admin_vlan: 1816
+
+
+
+internal_interface: enp129s0f0.203
+internal_vlan: 203
+
+bare_bmc_interface: enp129s0f0.204
+bare_bmc_vlan: 204
+
+bare_prov_interface: enp129s0f0.205
+bare_prov_vlan: 205
+
+tunnel_interface: enp129s0f0.206
+tunnel_vlan: 206
+
+#external_interface: enp65s0f0

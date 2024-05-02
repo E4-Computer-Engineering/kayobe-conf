@@ -1,0 +1,5 @@
+---
+collections:
+  - name: stackhpc.cephadm
+    version: 1.14.0
+

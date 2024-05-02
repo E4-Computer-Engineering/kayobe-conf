@@ -33,8 +33,9 @@
 #overcloud_dib_elements_default:
 
 # List of additional DIB elements. Default is none.
-#overcloud_dib_elements_extra:
-
+overcloud_dib_elements_extra:
+  -  block-device-efi
+  
 # List of DIB elements. Default is a combination of
 # overcloud_dib_elements_default and overcloud_dib_elements_extra.
 #overcloud_dib_elements:

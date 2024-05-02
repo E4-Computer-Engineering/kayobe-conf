@@ -77,7 +77,9 @@
 # Ironic configuration.
 
 # List of hardware types to enable for Bifrost's Ironic.
-#kolla_bifrost_enabled_hardware_types:
+kolla_bifrost_enabled_hardware_types: 
+  - redfish
+  - ipmi
 
 # List of extra kernel parameters for Bifrost's Ironic PXE configuration.
 # Default is empty.
@@ -103,10 +105,10 @@
 #kolla_bifrost_inspector_rules:
 
 # Ironic inspector IPMI username to set.
-#kolla_bifrost_inspector_ipmi_username:
+kolla_bifrost_inspector_ipmi_username: talos
 
 # Ironic inspector IPMI password to set.
-#kolla_bifrost_inspector_ipmi_password:
+kolla_bifrost_inspector_ipmi_password: 'E4company!TM'
 
 # Ironic inspector network interface name on which to check for an LLDP switch
 # port description to use as the node's name.
