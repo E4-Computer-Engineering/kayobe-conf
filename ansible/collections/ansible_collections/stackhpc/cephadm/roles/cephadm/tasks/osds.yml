@@ -1,0 +1,22 @@
+---
+# We need to register this as a variable, otherwise it will not be interpreted
+# correctly when setting ansible_host in the next task.
+- name: Set a fact about the Ansible host
+  set_fact:
+    mon_ansible_host: "{{ hostvars[inventory_hostname].ansible_host }}"
+
+- name: Add OSDs individually
+  command:
+    cmd: >
+         cephadm shell --
+         ceph orch daemon add osd {{ ansible_facts.nodename }}:{{ item }}
+  become: true
+  register: osd_add_result
+  changed_when: not osd_add_result.stdout.startswith("Created no osd(s) on host")
+  delegate_to: "{{ omit if 'mons' in group_names else groups['mons'][0] }}"
+  when: cephadm_osd_devices | length > 0
+  with_items: "{{ cephadm_osd_devices }}"
+  vars:
+    # NOTE: Without this, the delegate hosts's ansible_host variable will not
+    # be respected.
+    ansible_host: "{{ mon_ansible_host if 'mons' in group_names else hostvars[groups['mons'][0]].ansible_host }}"
