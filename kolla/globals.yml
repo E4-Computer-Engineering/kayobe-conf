@@ -3,4 +3,8 @@
 glance_backend_ceph: "yes"
 cinder_backend_ceph: "yes"
 nova_backend_ceph: "yes"
+horizon_keystone_multidomain: True
+horizon_keystone_domain_choices:
+    Default: Local
+    e4red: E4
  
