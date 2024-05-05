@@ -41,3 +41,10 @@ etc/kayobe/inventory/group_vars/seed/ansible-host
 
 # Ignore kolla configuration.
 etc/kolla
+kolla/config/cinder/cinder-backup/ceph.client.cinder-backup.keyring
+kolla/config/cinder/cinder-backup/ceph.client.cinder.keyring
+kolla/config/cinder/cinder-volume/ceph.client.cinder.keyring
+kolla/config/glance/ceph.client.glance.keyring
+kolla/config/ironic/ironic-agent.initramfs
+kolla/config/ironic/ironic-agent.kernel
+kolla/config/nova/ceph.client.cinder.keyring

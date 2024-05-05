@@ -13,12 +13,11 @@
 #kolla_ironic_default_bios_interface:
 
 # Specify the list of boot interfaces to load during service initialization.
-#kolla_ironic_enabled_boot_interfaces:
-
+kolla_ironic_enabled_boot_interfaces: 
+- pxe
 # Default boot interface to be used for nodes that do not have boot_interface
 # field set.
-#kolla_ironic_default_boot_interface:
-
+kolla_ironic_default_boot_interface: pxe
 # Specify the list of console interfaces to load during service initialization.
 #kolla_ironic_enabled_console_interfaces:
 
@@ -27,11 +26,12 @@
 #kolla_ironic_default_console_interface:
 
 # Specify the list of deploy interfaces to load during service initialization.
-#kolla_ironic_enabled_deploy_interfaces:
+kolla_ironic_enabled_deploy_interfaces: 
+  - direct
 
 # Default deploy interface to be used for nodes that do not have
 # deploy_interface field set.
-#kolla_ironic_default_deploy_interface:
+kolla_ironic_default_deploy_interface: direct
 
 # Specify the list of inspect interfaces to load during service initialization.
 #kolla_ironic_enabled_inspect_interfaces:
