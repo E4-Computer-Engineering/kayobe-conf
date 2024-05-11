@@ -7,4 +7,6 @@ horizon_keystone_multidomain: True
 horizon_keystone_domain_choices:
     Default: Local
     e4red: E4
- 
+kolla_enable_tls_external: "yes"
+kolla_enable_tls_backend: "yes"
+kolla_copy_ca_into_containers: "yes" 

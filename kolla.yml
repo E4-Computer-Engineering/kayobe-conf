@@ -245,10 +245,12 @@ kolla_ansible_target_venv: /opt/kayobe/venvs/kolla-ansible
 #kolla_ansible_vault_cacert:
 
 # Whether TLS is enabled for the external API endpoints. Default is 'no'.
-#kolla_enable_tls_external:
+kolla_enable_tls_external: true
 
 # Whether TLS is enabled for the internal API endpoints. Default is 'no'.
-#kolla_enable_tls_internal:
+#kolla_enable_tls_internal: true
+
+  #kolla_enable_tls_backend: true
 
 # Whether debug logging is enabled. Default is 'false'.
 #kolla_openstack_logging_debug:
@@ -551,7 +553,7 @@ kolla_external_vip_address: 172.18.16.46
 # Fully Qualified Domain Name (FQDN) of OpenStack external API. Default is the
 # fqdn attribute of the external network if set, otherwise
 # kolla_external_vip_address.
-#kolla_external_fqdn:
+kolla_external_fqdn: cloud.e4red.lan
 
 ###############################################################################
 # TLS certificate bundle management
