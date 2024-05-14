@@ -48,3 +48,4 @@ kolla/config/glance/ceph.client.glance.keyring
 kolla/config/ironic/ironic-agent.initramfs
 kolla/config/ironic/ironic-agent.kernel
 kolla/config/nova/ceph.client.cinder.keyring
+kolla/certificates/*
