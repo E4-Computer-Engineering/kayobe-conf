@@ -5,7 +5,7 @@
 # Ironic Python Agent (IPA) image build configuration.
 
 # Whether to build IPA images from source.
-#ipa_build_images:
+ipa_build_images: true
 
 # URL of IPA source repository.
 #ipa_build_source_url:
@@ -28,10 +28,10 @@
 # ["ubuntu", "enable-serial-console", "ironic-python-agent-ramdisk"] otherwise.
 #ipa_build_dib_elements_default:
 
-# List of additional Diskimage Builder (DIB) elements to use when building IPA
-# images. Default is none.
-#ipa_build_dib_elements_extra:
-
+  # List of additional Diskimage Builder (DIB) elements to use when building IPA
+  # images. Default is none.
+ipa_build_dib_elements_extra:
+  - devuser
 # List of Diskimage Builder (DIB) elements to use when building IPA images.
 # Default is combination of ipa_build_dib_elements_default and
 # ipa_build_dib_elements_extra.
@@ -43,8 +43,13 @@
 
 # Dictionary of additional environment variables to provide to Diskimage
 # Builder (DIB) during IPA image build.
-#ipa_build_dib_env_extra:
-
+ipa_build_dib_env_extra:
+  DIB_DEV_USER_USERNAME: "e4user"
+  DIB_DEV_USER_PASSWORD: "000000"
+  DIB_DEV_USER_PWDLESS_SUDO: "yes"
+  DIB_BOOTLOADER_SERIAL_CONSOLE: "ttyS01,115200"
+  DIB_DEV_USER_SHELL: "/bin/bash"
+  DIB_IPA_CERT: "/etc/ssl/certs/ca-certificates.crt"
 # Dictionary of environment variables to provide to Diskimage Builder (DIB)
 # during IPA image build.
 #ipa_build_dib_env:
@@ -137,7 +142,8 @@
 #ipa_kernel_options_extra:
 
 # List of kernel parameters for Ironic python agent.
-#ipa_kernel_options:
+ipa_kernel_options:
+  - "console=ttyS0,115200"
 
 ###############################################################################
 # Dummy variable to allow Ansible to accept this file.

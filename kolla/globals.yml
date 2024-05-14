@@ -8,5 +8,9 @@ horizon_keystone_domain_choices:
     Default: Local
     e4red: E4
 kolla_enable_tls_external: "yes"
+kolla_enable_tls_internal: "yes"
 kolla_enable_tls_backend: "yes"
+openstack_cacert: "/etc/ssl/certs/ca-certificates.crt"
 kolla_copy_ca_into_containers: "yes" 
+  #ironic_http_interface: br_public.205
+  #ironic_tftp: 100.127.205.1
