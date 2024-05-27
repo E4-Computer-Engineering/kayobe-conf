@@ -13,6 +13,11 @@ medooza00 ipmi_address=100.127.200.110 bmc_type=
 medooza01 ipmi_address=100.127.200.111 bmc_type=
 medooza02 ipmi_address=100.127.200.112 bmc_type=
 
+[monitoring]
+medooza00 ipmi_address=100.127.200.110 bmc_type=
+medooza01 ipmi_address=100.127.200.111 bmc_type=
+medooza02 ipmi_address=100.127.200.112 bmc_type=
+
 [storage]
 medooza00 ipmi_address=100.127.200.110 bmc_type=
 medooza01 ipmi_address=100.127.200.111 bmc_type=

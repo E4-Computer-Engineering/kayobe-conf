@@ -10,6 +10,7 @@ overcloud_groups:
   - controllers
   - storage
   - compute
+  - monitoring
 
 
 # Dict mapping overcloud Ansible group names to lists of hosts in the group.
@@ -25,6 +26,10 @@ overcloud_group_hosts_map:
     - medooza01
     - medooza02
   compute:
+    - medooza00
+    - medooza01
+    - medooza02
+  monitoring:
     - medooza00
     - medooza01
     - medooza02

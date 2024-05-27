@@ -284,7 +284,7 @@ kolla_enable_tls_external: true
 #kolla_enable_ceilometer_ipmi:
 #kolla_enable_ceilometer_prometheus_pushgateway:
 #kolla_enable_cells:
-#kolla_enable_central_logging:
+kolla_enable_central_logging: true
 #kolla_enable_ceph_rgw:
 #kolla_enable_ceph_rgw_loadbalancer:
 kolla_enable_cinder: true
@@ -313,7 +313,7 @@ kolla_enable_glance: true
 #kolla_enable_glance_image_cache:
 #kolla_enable_gnocchi:
 #kolla_enable_gnocchi_statsd:
-#kolla_enable_grafana:
+kolla_enable_grafana: true
 #kolla_enable_grafana_external:
 #kolla_enable_hacluster:
 kolla_enable_haproxy: true
@@ -407,8 +407,8 @@ kolla_enable_nova_ssh: true
 kolla_enable_ovn: true
 #kolla_enable_ovs_dpdk:
 kolla_enable_placement: true
-#kolla_enable_prometheus:
-#kolla_enable_prometheus_alertmanager:
+kolla_enable_prometheus: true
+kolla_enable_prometheus_alertmanager: true
 #kolla_enable_prometheus_alertmanager_external:
 #kolla_enable_prometheus_blackbox_exporter:
 #kolla_enable_prometheus_cadvisor:
@@ -416,16 +416,16 @@ kolla_enable_placement: true
 #kolla_enable_prometheus_elasticsearch_exporter:
 #kolla_enable_prometheus_etcd_integration:
 #kolla_enable_prometheus_fluentd_integration:
-#kolla_enable_prometheus_haproxy_exporter:
-#kolla_enable_prometheus_libvirt_exporter:
+kolla_enable_prometheus_haproxy_exporter: true 
+kolla_enable_prometheus_libvirt_exporter: true
 #kolla_enable_prometheus_memcached_exporter:
 #kolla_enable_prometheus_msteams:
 #kolla_enable_prometheus_mysqld_exporter:
-#kolla_enable_prometheus_node_exporter:
-#kolla_enable_prometheus_openstack_exporter:
+kolla_enable_prometheus_node_exporter: true
+kolla_enable_prometheus_openstack_exporter: true
 #kolla_enable_prometheus_openstack_exporter_external:
 #kolla_enable_prometheus_abbitmq_exporter:
-#kolla_enable_prometheus_server:
+kolla_enable_prometheus_server: true
 #kolla_enable_proxysql:
 kolla_enable_rabbitmq: true
 #kolla_enable_redis:
