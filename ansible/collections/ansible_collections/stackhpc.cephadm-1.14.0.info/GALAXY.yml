@@ -1,8 +1,0 @@
-download_url: https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/artifacts/stackhpc-cephadm-1.14.0.tar.gz
-format_version: 1.0.0
-name: cephadm
-namespace: stackhpc
-server: https://galaxy.ansible.com/api/
-signatures: []
-version: 1.14.0
-version_url: /api/v3/plugin/ansible/content/published/collections/index/stackhpc/cephadm/versions/1.14.0/

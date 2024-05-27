@@ -1,3 +1,0 @@
----
-switch_auth_pass: "ADMIN"
-ansible_ssh_pass: "ADMIN"
