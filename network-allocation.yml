@@ -1,0 +1,6 @@
+bmc_ips:
+  seed-kayobe: 100.127.100.13
+provision_ips:
+  seed-kayobe: 100.127.102.13
+public_ips:
+  seed-kayobe: 172.18.36.12
