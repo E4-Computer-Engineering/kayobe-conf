@@ -6,12 +6,33 @@
 #overcloud_group_default:
 
 # List of names of Ansible groups for overcloud hosts.
-#overcloud_groups:
+overcloud_groups:
+  - controllers
+  - compute
+  - network
+  - storage  
 
 # Dict mapping overcloud Ansible group names to lists of hosts in the group.
 # As a special case, the group 'ignore' can be used to specify hosts that
 # should not be added to the inventory.
-#overcloud_group_hosts_map:
+overcloud_group_hosts_map: 
+  controllers: 
+    - control0
+    - control1
+    - control2
+  compute: 
+    - control0
+    - control1
+    - control2
+  network: 
+    - control0
+    - control1
+    - control2
+  storage: 
+    - control0
+    - control1
+    - control2
+
 
 # To prevent some network issues you can choose to disable cloud-init
 #disable_cloud_init:

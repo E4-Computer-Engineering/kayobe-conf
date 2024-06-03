@@ -1,6 +1,13 @@
 bmc_ips:
   seed-kayobe: 100.127.100.13
+internal_ips:
+  control0: 100.127.103.1
+  control1: 100.127.103.2
+  control2: 100.127.103.3
 provision_ips:
   seed-kayobe: 100.127.102.13
 public_ips:
+  control0: 172.18.36.13
+  control1: 172.18.36.14
+  control2: 172.18.36.15
   seed-kayobe: 172.18.36.12

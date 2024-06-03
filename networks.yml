@@ -77,12 +77,12 @@ public_net_name: public
 #
 public_cidr: 172.18.36.0/24
 public_allocation_pool_start: 172.18.36.12
-public_allocation_pool_end: 172.18.36.14
+public_allocation_pool_end: 172.18.36.15
 public_gateway: 172.18.36.1
           
-external_cidr: 172.18.37.0/24
-external_allocation_pool_start: 172.18.37.18
-external_allocation_pool_end: 172.18.37.19
+  #external_cidr: 172.18.37.0/24
+  #external_allocation_pool_start: 172.18.37.18
+  #external_allocation_pool_end: 172.18.37.19
                   
 provision_cidr: 100.127.102.0/24
 provision_allocation_pool_start: 100.127.102.13
@@ -92,11 +92,11 @@ provision_inspection_allocation_pool_end: 100.127.102.120
                          
 internal_cidr: 100.127.103.0/24
 inernal_allocation_pool_start: 100.127.103.13
-internal_allocation_pool_end: 100.127.103.16
+internal_allocation_pool_end: 100.127.103.17
 
 bmc_cidr: 100.127.100.0/24
 bmc_allocation_pool_start: 100.127.100.13
-bmc_allocation_pool_end: 100.127.100.16
+bmc_allocation_pool_end: 100.127.100.17
 
 #
 # Host or group-specific network attributes such as interface names are
