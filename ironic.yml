@@ -53,7 +53,7 @@ kolla_ironic_default_deploy_interface: direct
 
 # Default network interface to be used for nodes that do not have
 # network_interface field set.
-#kolla_ironic_default_network_interface: br_public.205
+kolla_ironic_default_network_interface: flat
 
 
 # Specify the list of power interfaces to load during service initialization.

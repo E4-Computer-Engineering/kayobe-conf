@@ -53,16 +53,16 @@
 #inspector_enable_discovery:
 
 # The Ironic driver with which to register newly discovered nodes.
-inspector_discovery_enroll_node_driver: idrac
+inspector_discovery_enroll_node_driver: ipmi
 
 ###############################################################################
 # Ironic inspector configuration.
 
 # Ironic inspector IPMI username to set.
-#inspector_ipmi_username:
+inspector_ipmi_username: ADMIN
 
 # Ironic inspector IPMI password to set.
-#inspector_ipmi_password:
+inspector_ipmi_password: E4company!TM
 
 # Ironic inspector default network interface name on which to check for an LLDP
 # switch port description to use as the node's name.
