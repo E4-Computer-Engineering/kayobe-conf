@@ -41,7 +41,7 @@ public_net_name: public
 #tunnel_net_name:
 
 # Name of the network used to carry storage data traffic.
-#storage_net_name:
+storage_net_name: internal
 
 # Name of the network used to carry storage management traffic.
 #storage_mgmt_net_name:

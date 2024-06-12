@@ -23,10 +23,10 @@
 
 # DIB base OS element. Default is {{ 'rocky-container' if os_distribution ==
 # 'rocky' else os_distribution }}.
-#overcloud_dib_os_element:
+overcloud_dib_os_element: ubuntu
 
 # DIB image OS release. Default is {{ os_release }}.
-#overcloud_dib_os_release:
+overcloud_dib_os_release: jammy
 
 # List of default DIB elements. Default is ["centos", "cloud-init-datasources",
 # "disable-selinux", "enable-serial-console", "vm"] when
@@ -35,8 +35,12 @@
 # when overcloud_dib_os_element is "rocky" or
 # ["ubuntu", "cloud-init-datasources", "enable-serial-console", "vm"]
 # when overcloud_dib_os_element is "ubuntu".
-#overcloud_dib_elements_default:
-
+overcloud_dib_elements_default:
+    - ubuntu
+    - cloud-init-datasources
+    - enable-serial-console
+    - vm
+    - block-device-efi
 # List of additional DIB elements. Default is none.
 #overcloud_dib_elements_extra:
 
@@ -52,7 +56,8 @@
 #overcloud_dib_env_vars_default:
 
 # DIB additional environment variables. Default is none.
-#overcloud_dib_env_vars_extra:
+overcloud_dib_env_vars_extra:
+  DIB_RELEASE: "jammy"
 
 # DIB environment variables. Default is combination of
 # overcloud_dib_env_vars_default and overcloud_dib_env_vars_extra.

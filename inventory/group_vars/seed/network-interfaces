@@ -7,7 +7,8 @@
 # define the group-specific attributes of networks. The following example shows
 # a basic configuration for a network called "example":
 #
-public_interface: enp1s0
+public_interface: enp2s0.1836
+public_vlan: 1836
 provision_interface: enp2s0
 bmc_interface: enp3s0
 #
