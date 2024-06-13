@@ -51,7 +51,7 @@
 # OS release. Valid options are "9-stream" when os_distribution is "centos", or
 # "9" when os_distribution is "rocky", or "jammy" when os_distribution is
 # "ubuntu".
-#os_release:
+os_release: jammy
 
 ###############################################################################
 # Ansible configuration.

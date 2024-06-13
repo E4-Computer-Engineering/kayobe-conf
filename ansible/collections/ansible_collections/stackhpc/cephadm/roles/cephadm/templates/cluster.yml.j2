@@ -1,0 +1,77 @@
+{% for host in groups['ceph'] %}
+---
+service_type: host
+hostname: {{ hostvars[host].ansible_facts.nodename }}
+{% set cephadm_admin_interface = hostvars[host]['cephadm_admin_interface'] %}
+addr: {{ hostvars[host]['ansible_facts'][cephadm_admin_interface]['ipv4']['address'] }}
+labels:
+{% if host in groups['mons'] %}
+  - _admin
+  - mon
+{% endif %}
+{% if host in groups['mgrs'] %}
+  - mgr
+{% endif %}
+{% if host in groups['osds'] %}
+  - osd
+{% endif %}
+{% if host in groups.get('rgws', []) %}
+  - rgw
+{% endif %}
+{% if host in groups.get('ingress', []) %}
+  - ingress
+{% endif %}
+{% if hostvars[host].get('cephadm_host_labels', []) | length > 0 %}
+{{ hostvars[host].get('cephadm_host_labels', []) }}
+{% endif %}
+{% endfor %}
+---
+service_type: mon
+placement:
+  count: {{ cephadm_mon_count }}
+  label: mon
+---
+service_type: mgr
+placement:
+  count: {{ cephadm_mgr_count }}
+  label: mgr
+---
+service_type: crash
+placement:
+  host_pattern: "*"
+{% if groups.get('rgws', []) | length > 0 %}
+{% for service in cephadm_radosgw_services %}
+---
+service_type: rgw
+service_id: {{ service.id }}
+placement:
+  label: rgw
+{% if service.count_per_host is defined %}
+  count_per_host: {{ service.count_per_host }}
+{% endif %}
+{% if service.networks is defined %}
+{% if service.networks is string %}
+networks:
+  - "{{ service.networks }}"
+{% else %}
+networks:
+  {{ service.networks | to_nice_yaml }}
+{% endif %}
+{% endif %}
+{% if service.spec is defined %}
+spec:
+  {{ service.spec | to_nice_yaml }}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% if groups.get('ingress', []) | length > 0 %}
+{% for service in cephadm_ingress_services %}
+---
+service_type: ingress
+service_id: {{ service.id }}
+placement:
+  label: ingress
+spec:
+  {{ service.spec | to_nice_yaml }}
+{% endfor %}
+{% endif %}

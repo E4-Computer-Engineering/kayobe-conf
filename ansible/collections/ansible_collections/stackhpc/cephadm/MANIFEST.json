@@ -1,0 +1,36 @@
+{
+ "collection_info": {
+  "namespace": "stackhpc",
+  "name": "cephadm",
+  "version": "1.14.0",
+  "authors": [
+   "Michal Nasiadka",
+   "Bartosz Bezak",
+   "John Garbutt",
+   "Mark Goddard"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "cephadm",
+   "infrastructure"
+  ],
+  "description": "Ansible roles to create and manage cephadm-based Ceph deployments",
+  "license": [
+   "Apache-2.0"
+  ],
+  "license_file": null,
+  "dependencies": {},
+  "repository": "https://github.com/stackhpc/ansible-collection-cephadm",
+  "documentation": null,
+  "homepage": null,
+  "issues": null
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "57d8aafbbd5709fca7d4b638881d9b16c56828299f97b33718e37b9df72ca0e8",
+  "format": 1
+ },
+ "format": 1
+}
