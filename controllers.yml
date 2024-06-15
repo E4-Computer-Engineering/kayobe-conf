@@ -38,7 +38,6 @@
 controller_extra_network_interfaces:
   - custom2
   - custom
-
 # List of network interfaces to which network nodes are attached.
 #controller_network_host_network_interfaces:
 

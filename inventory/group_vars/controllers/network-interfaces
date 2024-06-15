@@ -36,6 +36,7 @@ admin_vlan: 1816
 internal_interface: enp129s0f0.203
 internal_vlan: 203
 
+
 bare_bmc_interface: enp129s0f0.204
 bare_bmc_vlan: 204
 

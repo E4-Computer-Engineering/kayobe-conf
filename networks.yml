@@ -77,6 +77,9 @@ bmc_cidr: 100.127.200.0/24
 bmc_allocation_pool_start: 100.127.200.20
 bmc_allocation_pool_end: 100.127.200.99
 
+lbmgmt_cidr: 100.127.201.0/24
+lbmgmt_allocation_pool_start: 100.127.201.20
+lbmgmt_allocation_pool_end: 100.127.201.99
 
 provision_cidr: 100.127.202.0/24
 provision_allocation_pool_start: 100.127.202.11

@@ -14,3 +14,20 @@ openstack_cacert: "/etc/ssl/certs/ca-certificates.crt"
 kolla_copy_ca_into_containers: "yes" 
   #ironic_http_interface: br_public.205
   #ironic_tftp: 100.127.205.1
+#Designate
+designate_recursion: "yes"
+designate_forwarders_addresses: "172.18.16.24; 172.16.2.2"
+designate_backend: bind9
+designate_ns_record:
+  - "cloud.e4red.lan"
+designate_dnssec_validation: "no"
+neutron_dns_domain: "tech-dev.e4red.lan"
+
+octavia_certs_country: IT
+octavia_certs_state: Italy
+octavia_certs_organization: E4company
+octavia_certs_organizational_unit: Octavia
+enable_neutron_provider_networks: yes
+octavia_auto_configure: no
+
+
