@@ -4,22 +4,14 @@
 
 
 [compute]
-control0 ipmi_address=172.18.40.248 bmc_type=
-control1 ipmi_address=172.18.40.248 bmc_type=
-control2 ipmi_address=172.18.40.248 bmc_type=
+medooza-control-dev ipmi_address=100.127.100.31 bmc_type=
 
 [controllers]
-control0 ipmi_address=172.18.40.248 bmc_type=
-control1 ipmi_address=172.18.40.248 bmc_type=
-control2 ipmi_address=172.18.40.248 bmc_type=
+medooza-control-dev ipmi_address=100.127.100.31 bmc_type=
 
 [network]
-control0 ipmi_address=172.18.40.248 bmc_type=
-control1 ipmi_address=172.18.40.248 bmc_type=
-control2 ipmi_address=172.18.40.248 bmc_type=
+medooza-control-dev ipmi_address=100.127.100.31 bmc_type=
 
 [storage]
-control0 ipmi_address=172.18.40.248 bmc_type=
-control1 ipmi_address=172.18.40.248 bmc_type=
-control2 ipmi_address=172.18.40.248 bmc_type=
+medooza-control-dev ipmi_address=100.127.100.31 bmc_type=
 

@@ -12,7 +12,7 @@ localhost ansible_connection=local
 [seed]
 # Add a seed node here if required. This host will provide the Bifrost
 # undercloud.
-seed-kayobe ansible_host=172.18.36.12 ansible_user=ubuntu
+medooza-seed-dev ansible_host=172.18.36.16 ansible_user=ubuntu
 [controllers]
 # Add controller nodes here if required. These hosts will provide the
 # OpenStack overcloud.

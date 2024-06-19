@@ -1,13 +1,9 @@
 bmc_ips:
-  seed-kayobe: 100.127.100.13
+  medooza-seed-dev: 100.127.100.16
 internal_ips:
-  control0: 100.127.103.1
-  control1: 100.127.103.2
-  control2: 100.127.103.3
+  medooza-control-dev: 100.127.103.17
 provision_ips:
-  seed-kayobe: 100.127.102.13
+  medooza-seed-dev: 100.127.102.16
 public_ips:
-  control0: 172.18.36.13
-  control1: 172.18.36.14
-  control2: 172.18.36.15
-  seed-kayobe: 172.18.36.12
+  medooza-control-dev: 172.18.36.17
+  medooza-seed-dev: 172.18.36.16
