@@ -41,6 +41,7 @@ overcloud_dib_elements_default:
     - enable-serial-console
     - vm
     - block-device-efi
+    - devuser
 # List of additional DIB elements. Default is none.
 #overcloud_dib_elements_extra:
 
@@ -57,11 +58,16 @@ overcloud_dib_elements_default:
 
 # DIB additional environment variables. Default is none.
 overcloud_dib_env_vars_extra:
-  DIB_RELEASE: "jammy"
+  DIB_DEV_USER_USERNAME: "e4user"
+  DIB_DEV_USER_PASSWORD: "gianluca"
+  DIB_DEV_USER_PWDLESS_SUDO: "yes"
+  DIB_DEV_USER_SHELL: "/bin/bash"
+  DIB_BLOCK_DEVICE_CONFIG: "file:///home/ubuntu/lvm.conf"  
 
 # DIB environment variables. Default is combination of
 # overcloud_dib_env_vars_default and overcloud_dib_env_vars_extra.
 #overcloud_dib_env_vars:
+
 
 # List of DIB packages to install. Default is to install no extra packages.
 #overcloud_dib_packages:

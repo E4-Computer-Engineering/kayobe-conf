@@ -1,2 +1,6 @@
 ---
 # Add extra Kolla global configuration here.
+enable_manila: "yes"
+enable_manila_backend_generic: "yes"
+
+

@@ -5,7 +5,7 @@
 # Network role to network mappings.
 
 # Name of the network used for admin access to the overcloud
-admin_oc_net_name: public
+admin_oc_net_name: provision
 
 # Name of the network used by the seed to manage the bare metal overcloud
 # hosts via their out-of-band management controllers.
@@ -24,7 +24,7 @@ provision_oc_net_name: provision
 #provision_wl_net_name:
 
 # Name of the network used to expose the internal OpenStack API endpoints.
-internal_net_name: internal
+internal_net_name: provision
 
 # List of names of networks used to provide external network access via
 # Neutron.
@@ -33,15 +33,16 @@ internal_net_name: internal
 # containing one item, external_net_name.
 external_net_names: 
   - external
+  - provision
 
 # Name of the network used to expose the public OpenStack API endpoints.
-public_net_name: public
+public_net_name: provision
 
 # Name of the network used by Neutron to carry tenant overlay network traffic.
 #tunnel_net_name:
 
 # Name of the network used to carry storage data traffic.
-storage_net_name: internal
+storage_net_name: provision
 
 # Name of the network used to carry storage management traffic.
 #storage_mgmt_net_name:
@@ -75,23 +76,17 @@ storage_net_name: internal
 # example_vlan: 42
 #
 #
-public_cidr: 172.18.36.0/24
-public_allocation_pool_start: 172.18.36.12
-public_allocation_pool_end: 172.18.36.15
-public_gateway: 172.18.36.1
           
-  #external_cidr: 172.18.37.0/24
-  #external_allocation_pool_start: 172.18.37.18
-  #external_allocation_pool_end: 172.18.37.19
                   
 provision_cidr: 100.127.102.0/24
-provision_allocation_pool_start: 100.127.102.13
+provision_allocation_pool_start: 100.127.102.17
 provision_allocation_pool_end: 100.127.102.20
 provision_inspection_allocation_pool_start: 100.127.102.110
 provision_inspection_allocation_pool_end: 100.127.102.120
-                         
+provision_gateway: 100.127.102.16
+
 internal_cidr: 100.127.103.0/24
-inernal_allocation_pool_start: 100.127.103.13
+internal_allocation_pool_start: 100.127.103.17
 internal_allocation_pool_end: 100.127.103.17
 
 bmc_cidr: 100.127.100.0/24
