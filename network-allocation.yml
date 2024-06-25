@@ -3,6 +3,7 @@ bmc_ips:
 internal_ips:
   medooza-control-dev: 100.127.103.17
 provision_ips:
+  medooza-all-in-one-dev: 100.127.102.19
   medooza-control-dev: 100.127.102.17
   medooza-seed-dev: 100.127.102.16
 public_ips:
