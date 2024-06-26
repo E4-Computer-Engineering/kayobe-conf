@@ -21,7 +21,7 @@ provision_oc_net_name: provision
 
 # Name of the network used by the overcloud hosts to provision the bare metal
 # workload hosts.
-#provision_wl_net_name:
+provision_wl_net_name: provision
 
 # Name of the network used to expose the internal OpenStack API endpoints.
 internal_net_name: provision
@@ -55,7 +55,7 @@ storage_net_name: provision
 
 # Name of the network used to perform hardware introspection on the bare metal
 # workload hosts.
-#inspection_net_name:
+inspection_net_name: provision
 
 # Name of the network used to perform cleaning on the bare metal workload
 # hosts

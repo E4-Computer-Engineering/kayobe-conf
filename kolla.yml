@@ -342,7 +342,7 @@ kolla_enable_horizon: true
 #kolla_enable_horizon_watcher:
 #kolla_enable_horizon_zun:
 #kolla_enable_influxdb:
-#kolla_enable_ironic:
+kolla_enable_ironic: true
 #kolla_enable_ironic_neutron_agent:
 #kolla_enable_ironic_pxe_uefi:
 #kolla_enable_iscsid:
@@ -378,7 +378,7 @@ kolla_enable_neutron: true
 #kolla_enable_neutron_mlnx:
 #kolla_enable_neutron_packet_logging:
 #kolla_enable_neutron_port_forwarding:
-#kolla_enable_neutron_provider_networks:
+kolla_enable_neutron_provider_networks: true
 #kolla_enable_neutron_qos:
 #kolla_enable_neutron_segments:
 #kolla_enable_neutron_sfc:
