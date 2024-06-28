@@ -13,6 +13,8 @@ provision_bridge_ports:
 
 #internal_interface: lo
 external_interface: enp33s0f1
+bmc_interface: br_public.100
+bmc_vlan: 100
 #
 # Global network attributes such as subnet CIDRs are typically configured in
 # etc/kayobe/networks.yml.

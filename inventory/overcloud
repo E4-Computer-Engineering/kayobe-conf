@@ -4,14 +4,14 @@
 
 
 [compute]
-medooza-control-dev ipmi_address=100.127.100.31 bmc_type=
+medooza-control-dev ipmi_address=100.127.100.100 bmc_type=
 
 [controllers]
-medooza-control-dev ipmi_address=100.127.100.31 bmc_type=
+medooza-control-dev ipmi_address=100.127.100.100 bmc_type=
 
 [network]
-medooza-control-dev ipmi_address=100.127.100.31 bmc_type=
+medooza-control-dev ipmi_address=100.127.100.100 bmc_type=
 
 [storage]
-medooza-control-dev ipmi_address=100.127.100.31 bmc_type=
+medooza-control-dev ipmi_address=100.127.100.100 bmc_type=
 

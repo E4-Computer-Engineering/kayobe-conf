@@ -17,7 +17,8 @@ provision_oc_net_name: provision
 
 # Name of the network used by the overcloud hosts to manage the bare metal
 # compute hosts via their out-of-band management controllers.
-#oob_wl_net_name:
+# testare con bmc togliendolo da /etc/kayobe/controller.yaml
+oob_wl_net_name: provision
 
 # Name of the network used by the overcloud hosts to provision the bare metal
 # workload hosts.
@@ -83,7 +84,7 @@ provision_allocation_pool_start: 100.127.102.17
 provision_allocation_pool_end: 100.127.102.20
 provision_inspection_allocation_pool_start: 100.127.102.110
 provision_inspection_allocation_pool_end: 100.127.102.120
-provision_gateway: 100.127.102.16
+provision_gateway: 100.127.102.160
 
 internal_cidr: 100.127.103.0/24
 internal_allocation_pool_start: 100.127.103.17
@@ -93,6 +94,11 @@ bmc_cidr: 100.127.100.0/24
 bmc_allocation_pool_start: 100.127.100.13
 bmc_allocation_pool_end: 100.127.100.17
 
+##Max-20240627
+seed1840_cidr: 172.18.40.0/24
+seed1840_allocation_pool_start: 172.18.40.182
+seed1840_allocation_pool_end: 172.18.40.182
+seed1840_gateway: 172.18.40.1
 #
 # Host or group-specific network attributes such as interface names are
 # typically configured via host or group variables.
